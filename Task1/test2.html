@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+</head>
+<body>
+    <script>
+        // Declare an initial value for the mark (you can change this)
+        const mark = 75;
+
+        let grade;
+
+        // Determine the grade based on the mark
+        if (mark < 50) {
+            grade = "FAIL";
+        } else if (mark >= 50 && mark < 60) {
+            grade = "D";
+        } else if (mark >= 60 && mark < 70) {
+            grade = "C";
+        } else if (mark >= 70 && mark < 80) {
+            grade = "B";
+        } else if (mark >= 80 && mark < 90) {
+            grade = "A";
+        } else if (mark >= 90 && mark <= 100) {
+            grade = "A+";
+        } else {
+            console.log("Invalid mark. Please enter a value between 0 and 100.");
+        }
+
+        // Display the grade using document.write()
+        document.write(`<p>Mark: ${mark}</p>`);
+        document.write(`<p>Grade: ${grade !== undefined ? grade : "Invalid mark"}</p>`);
+    </script>
+</body>
+</html>

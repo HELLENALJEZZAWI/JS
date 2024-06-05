@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PI Math</title>
+</head>
+
+  <body>
+    <h4>Circle Calculations</h4>
+    <div id="result"></div>
+    <script>
+      let radius = 10;
+      let circumference = 2 * Math.PI * radius;
+      let area = Math.PI * radius * radius;
+
+      let resultElement = document.getElementById("result");
+      resultElement.innerHTML = `The circumference of a circle with radius ${radius} is: ${circumference}<br>`;
+      resultElement.innerHTML += `The area of a circle with radius ${radius} is: ${area}`;
+    </script>
+  </body>
+</html>

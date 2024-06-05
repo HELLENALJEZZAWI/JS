@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        // Prompt the user for an operation and two numbers
+        const operation = prompt("Enter an operation (+, -, *, or /):");
+        const num1 = parseFloat(prompt("Enter the first number:"));
+        const num2 = parseFloat(prompt("Enter the second number:"));
+
+        let result;
+
+        // Perform the calculation based on the operation
+        switch (operation) {
+            case "+":
+                result = num1 + num2;
+                break;
+            case "-":
+                result = num1 - num2;
+                break;
+            case "*":
+                result = num1 * num2;
+                break;
+            case "/":
+                result = num1 / num2;
+                break;
+            default:
+                console.log("Invalid operation. Please enter +, -, *, or /.");
+                break;
+        }
+
+        // Display the result in the console
+        if (result !== undefined) {
+            console.log(`Result: ${result}`);
+        }
+
+        // Display the operation and numbers on the HTML page
+        document.body.innerHTML = `
+            <h1>Calculator</h1>
+            <p>Operation: ${operation}</p>
+            <p>Number 1: ${num1}</p>
+            <p>Number 2: ${num2}</p>
+            <p>Result: ${result !== undefined ? result : "Invalid operation"}</p>
+        `;
+    </script>
+</body>
+</html>
